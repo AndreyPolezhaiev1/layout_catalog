@@ -1,9 +1,11 @@
+@use '../utils/variables.scss' as *;
+
 .stars {
   display: flex;
 
   &__star {
-    width: 16px;
-    height: 16px;
+    width: $stars-width;
+    height: $stars-height;
     background-image: url(../images/star.svg);
     background-position: center;
     background-repeat: no-repeat;

@@ -20,6 +20,8 @@
     text-transform: uppercase;
     white-space: nowrap;
     font-size: $nav-font-size;
+
+    transition: all 300ms ease;
   }
 
   &__link:hover {

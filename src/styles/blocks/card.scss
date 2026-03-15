@@ -4,7 +4,7 @@
   --column-count: 1;
 
   box-sizing: border-box;
-  padding: 50px 40px;
+  padding: 50px $main-padding-bottom;
 
   display: grid;
   place-content: center;
@@ -32,15 +32,16 @@
   background-color: $main-bg-color;
   width: $card-width;
   padding-top: 32px;
-  padding-bottom: 16px;
+  padding-bottom: $card-padding-bottom;
   border: 1px solid #f3f3f3;
-  border-radius: 5px;
+  border-radius: $card-border-radius;
+
   transition: all 300ms ease;
 
   &__header {
     display: flex;
     justify-content: center;
-    padding-bottom: 40px;
+    padding-bottom: $card-header-padding-bottom;
   }
 
   &__image {
@@ -54,16 +55,18 @@
 
   &__title {
     margin: 0;
-    font-size: 12px;
+    font-size: $card-title-fz;
     font-weight: 500;
-    line-height: 18px;
+    line-height: $card-title-lh;
+
+    transition: all 300ms ease;
   }
 
   &__code {
     display: block;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
+    font-size: $card-code-fz;
+    font-weight: $card-thin-fw;
+    line-height: $card-code-lh;
     color: $secondary-title-text-color;
     margin-top: 4px;
   }
@@ -72,13 +75,13 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-top: 16px;
+    padding-top: $card-rating-padding-top;
   }
 
   &__reviews {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 14px;
+    font-size: $card-reviews-fz;
+    font-weight: $card-thin-fw;
+    line-height: $card-code-lh;
   }
 
   &__price {
@@ -88,16 +91,16 @@
     padding-top: 24px;
 
     &-title {
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 18px;
+      font-size: $card-price-title-fz;
+      font-weight: $card-thin-fw;
+      line-height: $card-title-lh;
       color: $secondary-title-text-color;
     }
 
     &-value {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 18px;
+      font-size: $card-price-value-fz;
+      font-weight: $card-bold-fw;
+      line-height: $card-title-lh;
     }
   }
 
@@ -105,22 +108,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 16px;
+    padding-top: $card-btn-padding-top;
   }
 
   &__buy {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: $card-buy-fz;
     color: $main-bg-color;
     background-color: $button-bg-color;
-    font-weight: 700;
-    line-height: 16px;
+    font-weight: $card-bold-fw;
+    line-height: $card-buy-line-height;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 12px 70px;
-    border-radius: 5px;
+    padding: $card-buy-padding-vert 70px;
+    border-radius: $card-buy-border-radius;
+
+    transition: all 300ms ease;
 
     &:hover {
       color: $button-hover-color;
