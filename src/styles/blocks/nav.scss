@@ -1,0 +1,51 @@
+@use '../utils/variables.scss' as *;
+
+.nav {
+  margin: 0;
+
+  &__list {
+    margin: 0 auto;
+    display: flex;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+    height: $nav-height;
+    color: $nav-text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: $nav-font-size;
+  }
+
+  &__link:hover {
+    color: $nav-selected-color;
+  }
+
+  &__link:active {
+    color: $nav-selected-color;
+  }
+
+  &__link.is-active {
+    color: $nav-selected-color;
+  }
+
+  &__link.is-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    background-color: $nav-selected-color;
+    border-radius: 8px;
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 20px;
+  }
+}
