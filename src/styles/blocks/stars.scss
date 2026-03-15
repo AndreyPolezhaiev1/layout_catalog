@@ -12,7 +12,7 @@
   }
 
   &__star:not(:last-child) {
-    margin-right: 4px;
+    margin-right: $stars-star-not-last-child-mr;
   }
 
   @for $i from 1 through 5 {

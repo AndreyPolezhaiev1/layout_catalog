@@ -2,12 +2,12 @@
 
 .header {
   box-sizing: border-box;
-  font-weight: 500;
+  font-weight: $card-regular-fw;
   background-color: $header-bg-color;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: $header-padding-vert 50px;
+  padding: $header-padding;
 
   box-shadow: $header-shadow;
 
@@ -21,7 +21,7 @@
   &__logo-image {
     display: block;
     object-fit: cover;
-    max-width: 100%;
+    max-width: $header-logo-img-width;
     height: $header-logo-height;
     width: $header-logo-width;
   }

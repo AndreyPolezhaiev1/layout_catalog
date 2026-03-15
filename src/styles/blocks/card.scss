@@ -4,13 +4,13 @@
   --column-count: 1;
 
   box-sizing: border-box;
-  padding: 50px $main-padding-bottom;
+  padding: $main-padding;
 
   display: grid;
   place-content: center;
 
   grid-template-columns: repeat(var(--column-count), $card-width);
-  gap: 46px 48px;
+  gap: $main-gap;
 
   @media (min-width: 488px) {
     --column-count: 2;
@@ -31,12 +31,12 @@
   color: $main-text-color;
   background-color: $main-bg-color;
   width: $card-width;
-  padding-top: 32px;
+  padding-top: $card-padding-top;
   padding-bottom: $card-padding-bottom;
-  border: 1px solid #f3f3f3;
+  border: $card-border;
   border-radius: $card-border-radius;
 
-  transition: all 300ms ease;
+  transition: $body-transition;
 
   &__header {
     display: flex;
@@ -45,8 +45,8 @@
   }
 
   &__image {
-    width: 160px;
-    height: 134px;
+    width: $card-image-width;
+    height: $card-image-height;
   }
 
   &__main {
@@ -56,10 +56,10 @@
   &__title {
     margin: 0;
     font-size: $card-title-fz;
-    font-weight: 500;
+    font-weight: $card-regular-fw;
     line-height: $card-title-lh;
 
-    transition: all 300ms ease;
+    transition: $body-transition;
   }
 
   &__code {
@@ -68,7 +68,7 @@
     font-weight: $card-thin-fw;
     line-height: $card-code-lh;
     color: $secondary-title-text-color;
-    margin-top: 4px;
+    margin-top: $card-code-mt;
   }
 
   &__rating {
@@ -88,7 +88,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 24px;
+    padding-top: $card-price-pt;
 
     &-title {
       font-size: $card-price-title-fz;
@@ -122,16 +122,16 @@
     line-height: $card-buy-line-height;
     text-decoration: none;
     text-transform: uppercase;
-    padding: $card-buy-padding-vert 70px;
+    padding: $card-buy-padding;
     border-radius: $card-buy-border-radius;
 
-    transition: all 300ms ease;
+    transition: $body-transition;
 
     &:hover {
       color: $button-hover-color;
       background-color: inherit;
-      outline: 1px solid $button-bg-color;
-      outline-offset: -1px;
+      outline: $card-buy-hover-outline;
+      outline-offset: $card-buy-hover-outline-offset;
     }
   }
 
@@ -139,7 +139,7 @@
     transform: scale(1.2);
 
     .card__title {
-      color: #34568b;
+      color: $card-hover-text-title-color;
     }
   }
 }
